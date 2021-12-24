@@ -49,8 +49,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Teaching Points:** Web servers dont have to run on the standard port 80 and we can access them by specify the port explicitly. Additionally, the HTML that the browser is displaying might have notable secrets.
 
----
-
 ### WEBEX [25pts] The Middleman
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/the_middleman) ```solutions/web/the_middleman```
@@ -58,8 +56,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Intended Solution:** The competitor sets up a web proxy, ideally BurpSuite Community and using that web proxy intercepts web requests between the client browser and web server. The flag is in a XFLAG header.
 
 **Teaching Points** Here we introudce the idea of a web proxy and the concept that browers and servers are simply operating in a client-server relationship.
-
----
 
 ### WEBEX [50pts] Get Out
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
@@ -69,8 +65,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Teaching Points:** GET requests power the internet; the primary teaching point is what a GET request is and how parameter data is passed from the client to server. Additionally, how it can be manipulated.
 
----
-
 ### WEBEX [50pts] Mr. Robot
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/mr_robot) ```solutions/web/mr_robot```
@@ -79,8 +73,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Teaching Points:** First and foremost we teach what the robots RFC is and why its implemented for spiders. Then there is the idea that sometimes its used to hiden sensitive pages and can therefore expose them. Lastly, foreful browsing.
 
----
-
 ### WEBEX [50pts] Cookie Monster
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
 [**Solution:**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
@@ -88,8 +80,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
 
 **Teaching Points:** Cookies are simply another header in the web request and they are used for a variety of things but simply put are a way for a client to track information and send it to and from a web server.
-
----
 
 ### WEBEX [90pts] The Postman
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
