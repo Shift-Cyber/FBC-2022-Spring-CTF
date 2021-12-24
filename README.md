@@ -1,83 +1,95 @@
 # FBC-2022-Spring-CTF
 Capture The Flag (CTF) competition prepared for Fallbrook Cyber, Spring 2022
 
-![SCYCA Logo](.resources/Logo-Full-black-JPG.jpg)
+![SCYCA Logo](.rsrc/Logo-Full-black-JPG.jpg)
 
 ## Welcome!!
 This CTF is compromised of 30 challenges, with 6 problems per each of the 5 sections. For the newer players out there this is referring to the standard 5 CTF sections: web exploitation (webex), binary exploitation (binex), forensics, networking, and cryptography (crypto). The problems increase in difficulty as you progress through the point ratings with harder or more intricate problems awarding more points. Each problem has a series of hints that will get you 90% of the way to the answer if you choose to use them. The competition organizers have decided to leave these hints free for your use as the root purpose is of course to teach the skills and techniques to you. Each challenge will still, however, require a fair bit of effort from the participant to solve.
 
 Competition opens at 1500, at the start of the first practice of the year, 7 January 2022 and runs until the start of our last practice of the season on 20 May 2022. The goal is for you as the participant to take as much as possible away from this, aside from just the cool prizes ;)
 
-## Prizes
-1st Place - TBD<br>
-2nd Place - TBD<br>
-3rd Place - TBD<br>
+## Prize Pool
+These prizes are set for each position, however, prizes are actually picked in the order of the winner. For example, if the first place winner wants to take the second place prize and give up the first place prize to the would be winner, that is perfectly acceptable.
 
-**Tie breaks: **If there is a tie for a position on the scoreboard based on total points the tie will be decided by who achieved that amount of points first.
+**1st Place** - Nintendo Switch<br>
+**2nd Place** - Raspberry Pi 4B<br>
+**3rd Place** - Arduino w/BB Kit<br>
 
-## Challenge Breakout
+**Tie breaks:** If there is a tie for a position on the scoreboard based on total points the tie will be decided by who achieved that amount of points first.
+
+# Challenges
+## Introduction
+### WELCOME [1pt] For the Flag
+[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+
+**Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
+
+**Teaching Points:** This is how all Jeapordy CTFs work and its going to get them used to our flag format so that they have a crib in some cases or just so they know what they're looking for.
+
+<br>
+
+## Web Exploitation (WEBEX)
 ### WEBEX [10pts] Inspector Gadget
-Challenge files: ```web/inspector_gadget```
+[**Challenge:**](challenges/tcp1337--nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
+[**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
 
-Intended Solution: the competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
+**Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
-Teaching Points: Web servers dont have to run on the standard port 80 and we can access them by specify the port explicitly. Additionally, the HTML that the browser is displaying might have notable secrets.
+**Teaching Points:** Web servers dont have to run on the standard port 80 and we can access them by specify the port explicitly. Additionally, the HTML that the browser is displaying might have notable secrets.
 
 ---
 
 ### WEBEX [25pts] The Middleman
-Challenge files: ```web/the_middleman```
+[**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
+[**Solution:**](solutions/web/the_middleman) ```solutions/web/the_middleman```
 
-Here the competitor is provided a URL and is told that there is hidden data in the stream. The goal of the challenge is to setup Burp or Zap and catch the hidden traffic in the communication. This will be implemented either at the TCP layer or hideen in the page some other way.
+**Intended Solution:** The competitor sets up a web proxy, ideally BurpSuite Community and using that web proxy intercepts web requests between the client browser and web server. The flag is in a XFLAG header.
 
-Hint1: When we navigate to www.google.com our browser sends a request to Google's webserver for the data that it needs in order to display the user the web page, kind of like instructions for drawing something. This data is HTML code and other stuff. Can we get in the middle of this connection to see everything that is being sent?
-Hint2: we need better hints for this
+**Teaching Points** Here we introudce the idea of a web proxy and the concept that browers and servers are simply operating in a client-server relationship.
 
 ---
 
-Solution POC: ```relative/path/here```
+### WEBEX [50pts] GET Out
+[**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
+[**Solution:**](solutions/web/get_out) ```solutions/web/get_out```
 
-#### [50pts] GET Out
-Challenge Description
-With this one there is a page with three links and when they click the links it submits a GET with a parameter on the home page to choose one of three cat images. If they change the paraemeter to "flag" it will show a picture with the flag in it.
+**Intended Solution:** After navigating around the page and inspecting that the hyperlinks simply change a GET parameter, the user finds a code comment TODO saying that the "flag" button hasnt been implemented yet. They forecfully submit "flag" as the GET param to display the flag image.
 
-Intended Solution Writeup
+**Teaching Points:** GET requests power the internet; the primary teaching point is what a GET request is and how parameter data is passed from the client to server. Additionally, how it can be manipulated.
 
-Teaching points
+---
 
-Solution POC: ```relative/path/here```
+### WEBEX [50pts] Mr. Robot
+[**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
+[**Solution**](solutions/web/mr_robot) ```solutions/web/mr_robot```
 
-#### 50pts
-Challenge Description
-Here we're teaching what spidering/crawling and hidden things with robots are. Once they idenitfy robots.txt they will find a long url that they can forcefully browse to in order to get the flag.
+**Intended Solution:** User performs standard webapp reconisance and identifies an active robots.txt page. This page has an admin page that should be behind auth but is accessible. The user forecfully browses to the page for the flag.
 
-Intended Solution Writeup
+**Teaching Points:** First and foremost we teach what the robots RFC is and why its implemented for spiders. Then there is the idea that sometimes its used to hiden sensitive pages and can therefore expose them. Lastly, foreful browsing.
 
-Teaching points
+---
 
-Solution POC: ```relative/path/here```
+### WEBEX [50pts] Cookie Monster
+[**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
 
-#### 50pts
-Challenge Description
-In this we are going to present a cookie in a flag and force them to idenitfy the flag via inspecting cookies
+**Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
 
-Intended Solution Writeup
+**Teaching Points:** Cookies are simply another header in the web request and they are used for a variety of things but simply put are a way for a client to track information and send it to and from a web server.
 
-Teaching points
+---
 
-Solution POC: ```relative/path/here```
+### WEBEX [90pts] The Postman
+[**Challenge**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution**](solutions/web/the_postman) ```solutions/web/the_postman```
 
-#### 90pts
-Challenge Description
-Posting arbitrary data like a username that is being prevented clientside
+**Intended Solution:** User is given the login credentails but is told the page is submitting the wrong credentials due to a client-side bug. They manually set the POST parameters to login with the provided credentials successfully.
 
-Intended Solution Writeup
+**Teaching Points:** Sometimes there are things clientside that prevent us from logging in. Just because there is a bug client-side, doesn't mean we can't send data to the server. You have complete control over what is being sent via the proxy.
 
-Teaching points
+<br>
 
-Solution POC: ```relative/path/here```
-
-### Binary Exploitation (BINEX)
+## Binary Exploitation (BINEX)
 #### 10pts Challenge Name
 Challenge Description
 Run a linux binary to get the flag (requires setting executable)
