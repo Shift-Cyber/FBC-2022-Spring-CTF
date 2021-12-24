@@ -19,14 +19,14 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 # Challenges
-| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reverse Engineering](#reverse-engineering) |
+| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reversing](#reverse-engineering) |
 |:----:|:----------------:|:------------------:|:--------------:|:----------------:|:-----------------:|
 |  10  | Inspector Gadget | Execution          | Titanic        | Shark Week      | The Strings        |
 |  25  | The Middleman    | Telegram           | Cleopatra      | The Matrix      | Arrival            |
 |  50  | Get Out          | Fast and Furious   | Da Vinci Code  | Parasite        | Hidden Figures     |
 |  50  | Mr. Robot        | Stacked            | Imitation Game | Polaroid        | Hidden Places      |
 |  50  | Cookie Monster   | Ready, Aim, Fire   | Codebreaker    | Spy Kids        | Eraser             |
-|  90  | The Postman      | Return of the King | Enigma         | You've Got Mail | The Impossible |
+|  90  | The Postman      | Return of the King | Enigma         | You've Got Mail | Mission Impossible |
 
 <br>
 
@@ -318,7 +318,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### REVERSE [90pts] The Impossible
 [**Challenge:**](challenges/binary05-ELFx86) ```challenges/binary05-ELFx86```<br>
-[**Solution:**](solutions/re/the_impossible) ```solutions/re/mission_impossible```
+[**Solution:**](solutions/re/mission_impossible) ```solutions/re/mission_impossible```
 > FBC{flag_placeholder}
 
 **Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the flag function.
