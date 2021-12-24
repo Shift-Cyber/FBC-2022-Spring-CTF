@@ -17,10 +17,23 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Tie breaks:** If there is a tie for a position on the scoreboard based on total points the tie will be decided by who achieved that amount of points first.
 
+<br>
+
 # Challenges
+| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Forensics](#forensics) |
+|:----:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+|  10  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  25  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  90  | Challenge | Challenge | Challenge | Challenge | Challenge |
+
+<br>
+
 ## Introduction
 ### WELCOME [1pt] For the Flag
-[**Solution:**](./solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
@@ -30,8 +43,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ## Web Exploitation (WEBEX)
 ### WEBEX [10pts] Inspector Gadget
-[**Challenge:**](./challenges/tcp1337--nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
-[**Solution:**](./solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
+[**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
+[**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
