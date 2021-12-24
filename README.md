@@ -20,7 +20,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 # Challenges
 ## Introduction
 ### WELCOME [1pt] For the Flag
-[**Solution:**](./solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
@@ -30,8 +30,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ## Web Exploitation (WEBEX)
 ### WEBEX [10pts] Inspector Gadget
-[**Challenge:**](./challenges/tcp1337--nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
-[**Solution:**](./solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
+[**Challenge:**](challenges/tcp1337--nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
+[**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
@@ -40,8 +40,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [25pts] The Middleman
-[**Challenge:**](./challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
-[**Solution:**](./solutions/web/the_middleman) ```solutions/web/the_middleman```
+[**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
+[**Solution:**](solutions/web/the_middleman) ```solutions/web/the_middleman```
 
 **Intended Solution:** The competitor sets up a web proxy, ideally BurpSuite Community and using that web proxy intercepts web requests between the client browser and web server. The flag is in a XFLAG header.
 
@@ -50,8 +50,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [50pts] GET Out
-[**Challenge:**](./challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
-[**Solution:**](./solutions/web/get_out) ```solutions/web/get_out```
+[**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
+[**Solution:**](solutions/web/get_out) ```solutions/web/get_out```
 
 **Intended Solution:** After navigating around the page and inspecting that the hyperlinks simply change a GET parameter, the user finds a code comment TODO saying that the "flag" button hasnt been implemented yet. They forecfully submit "flag" as the GET param to display the flag image.
 
@@ -60,8 +60,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [50pts] Mr. Robot
-[**Challenge:**](./challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
-[**Solution**](./solutions/web/mr_robot) ```solutions/web/mr_robot```
+[**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
+[**Solution**](solutions/web/mr_robot) ```solutions/web/mr_robot```
 
 **Intended Solution:** User performs standard webapp reconisance and identifies an active robots.txt page. This page has an admin page that should be behind auth but is accessible. The user forecfully browses to the page for the flag.
 
@@ -70,8 +70,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [50pts] Cookie Monster
-[**Challenge:**](./challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
-[**Solution**](./solutions/web/cookie_monster) ```solutions/web/cookie_monster```
+[**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
 
 **Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
 
@@ -80,8 +80,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [90pts] The Postman
-[**Challenge**](./challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
-[**Solution**](./solutions/web/the_postman) ```solutions/web/the_postman```
+[**Challenge**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution**](solutions/web/the_postman) ```solutions/web/the_postman```
 
 **Intended Solution:** User is given the login credentails but is told the page is submitting the wrong credentials due to a client-side bug. They manually set the POST parameters to login with the provided credentials successfully.
 
