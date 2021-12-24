@@ -15,23 +15,22 @@ These prizes are set for each position, however, prizes are actually picked in t
 **2nd Place** - Raspberry Pi 4B<br>
 **3rd Place** - Arduino w/BB Kit<br>
 
-**Tie breaks:** If there is a tie for a position on the scoreboard based on total points the tie will be decided by who achieved that amount of points first.
-
+**Tie breaks:** If there is a tie for a position on the scoreboard based on total points the tie will be broken by who achieved that amount of points first.
 <br>
 
 # Challenges
 | Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Forensics](#forensics) |
 |:----:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|  10  | Challenge | Challenge | Challenge | Challenge | Challenge |
-|  25  | Challenge | Challenge | Challenge | Challenge | Challenge |
-|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
-|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
-|  50  | Challenge | Challenge | Challenge | Challenge | Challenge |
-|  90  | Challenge | Challenge | Challenge | Challenge | Challenge |
+|  10  | Inspector Gadget | Execution          | Challenge | Challenge | Challenge |
+|  25  | The Middleman    | Telegram           | Challenge | Challenge | Challenge |
+|  50  | Get Out          | Fast and Furious   | Challenge | Challenge | Challenge |
+|  50  | Mr. Robot        | Stacked            | Challenge | Challenge | Challenge |
+|  50  | Cookie Monster   | Ready, Aim, Fire   | Challenge | Challenge | Challenge |
+|  90  | The Postman      | Return of the King | Challenge | Challenge | Challenge |
 
 <br>
 
-## Introduction
+## Getting Started
 ### WELCOME [1pt] For the Flag
 [**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
 
@@ -62,7 +61,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ---
 
-### WEBEX [50pts] GET Out
+### WEBEX [50pts] Get Out
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/get_out) ```solutions/web/get_out```
 
@@ -74,7 +73,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### WEBEX [50pts] Mr. Robot
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
-[**Solution**](solutions/web/mr_robot) ```solutions/web/mr_robot```
+[**Solution:**](solutions/web/mr_robot) ```solutions/web/mr_robot```
 
 **Intended Solution:** User performs standard webapp reconisance and identifies an active robots.txt page. This page has an admin page that should be behind auth but is accessible. The user forecfully browses to the page for the flag.
 
@@ -84,7 +83,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### WEBEX [50pts] Cookie Monster
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
-[**Solution**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
+[**Solution:**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
 
 **Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
 
@@ -93,8 +92,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 ---
 
 ### WEBEX [90pts] The Postman
-[**Challenge**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
-[**Solution**](solutions/web/the_postman) ```solutions/web/the_postman```
+[**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution:**](solutions/web/the_postman) ```solutions/web/the_postman```
 
 **Intended Solution:** User is given the login credentails but is told the page is submitting the wrong credentials due to a client-side bug. They manually set the POST parameters to login with the provided credentials successfully.
 
@@ -103,68 +102,60 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 ## Binary Exploitation (BINEX)
-#### 10pts Challenge Name
-Challenge Description
-Run a linux binary to get the flag (requires setting executable)
+### BINEX [10pts] Execution
+[**Challenge:**](challenges/01-ELFx86) ```challenges/x86-elf-binary-1```<br>
+[**Solution:**](solutions/binex/execution) ```solutions/binex/execution```
 
-Intended Solution Writeup
+**Intended Solution:** The competitor will recieve the binary and must run it in order to recieve the flag, this means downloading it to an approperiate directory and setting executable, then running it.
 
-Teaching points
+**Teaching Points:** Here we are teaching that a binary will always be downloaded as 600 perms and needs to get executable perms in order to execute. Also loosely that anything can be set executable. Basically just how to run executables on a linux machine.
 
-Solution POC: ```relative/path/here```
+### BINEX [25pts] Telegram
+[**Challenge:**](challenges/tcp5555-socket-python3) ```challenges/tcp5555-socket-python3```<br>
+[**Solution:**](solutions/binex/telegram) ```solutions/binex/telegram```
 
-#### 25pts
-Challenge Description
-Connect to a remote socket with netcat
+**Intended Solution:** Here the competitor connects to a socket and must recieve a message. This is intended to be done with netcat but could teheoritically be done with pwntools or raw socket programming in any language.
 
-Intended Solution Writeup
+**Teaching Points:** This is designed to be a ramp up to sending and recieving an actual exploit across a socket remotely. The idea being that we first teach basic socket programming, then stack on top of it with pwntools.
 
-Teaching points
+### BINEX [50pts] Fast and Furious
+[**Challenge:**](challenges/tcp1234-socket-python3) ```challenges/tcp1234-socket-python3```<br>
+[**Solution:**](solutions/binex/fast_and_furious) ```solutions/binex/fast_and_furious```
 
-Solution POC: ```relative/path/here```
+**Intended Solution:** The competitor starts from a similar place with generic socket programming, but now must script in order to both send AND recieve from the socket 100 times within 10 seconds. This has to be scripted due to the time requirement.
 
-#### 50pts
-Challenge Description
-Requires that the user count to 100 over netcat within 10 seconds recieving responses in the process
+**Teaching Points:** Here we continue to staack on top of the socket programming concepts. The goal is to get a student to be able to recieve a program prompt or arbitrary data and handle that before sending a payload.
 
-Intended Solution Writeup
+### BINEX [50pts] Stacked
+[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp5678-socket-python3```<br>
+[**Solution:**](solutions/binex/stacked) ```solutions/binex/stacked```
 
-Teaching points
+**Intended Solution:** Now the competitor has a variable loaded onto the stack and must overwrite the contents via overflow. When that happens on the remote machine logic checks determine the variable was overflowed and print a value to the screen.
 
-Solution POC: ```relative/path/here```
+**Teaching Points:** We continue to build towards a stack overflow exploit for the purpose of RCE, here introducing the overwriting of variables on the stack. The user will get the source code here so they can undrstand whats going on behind the scenes a bit.
 
-#### 50pts
-Challenge Description
-Overflow a stack variable to get the flag locally then remotely
+### BINEX [50pts] Ready, Aim, Fire
+[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp6789-socket-python3```<br>
+[**Solution:**](solutions/binex/ready_aim_fire) ```solutions/binex/ready_aim_fire```
 
-Intended Solution Writeup
+**Intended Solution:** Now the competitor must calculate at exactly what offset the overflow is happening and replace those specific bytes with a non-printable byte pattern. This means pattern creation and matching.
 
-Teaching points
+**Teaching Points:** Continuing to build on the overflow logic, here we are introducing the idea of calculating where you have control. Offset calculation is critical to obtaining eventual code execution and this is the final step prior to overwriting with real addresses.
 
-Solution POC: ```relative/path/here```
+### BINEX [90pts] Return of the King
+[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp8888-socket-python3```<br>
+[**Solution:**](solutions/binex/return_of_the_king) ```solutions/binex/return_of_the_king```
 
-#### 50pts
-Challenge Description
-Overwrite the target variable with specific bytes
+**Intended Solution:** In the final binex challenge, we are overwriting with an actual address for simluated code execution. Here the user now must use the obtained shell to cat the flag file.
 
-Intended Solution Writeup
+**Teaching Points:** Finally we get to an actual logical overwrite where the user must take their point of control and derive a shell. They do not need to write shellcode however, as this will be a ret2win style POC.
 
-Teaching points
+<br>
 
-Solution POC: ```relative/path/here```
-
-#### 90pts
-Challenge Description
-Ret2Win with a provided function address on the remote, let ASLR and PIE stay on so they have to read it. Provide a buffer cap here and write in restrictions so they cant actually get legit RCE
-
-Intended Solution Writeup
-
-Teaching points
-
-Solution POC: ```relative/path/here```
-
-### Cryptography (CRYPTO)
-#### 10pts Challenge Name
+## Cryptography (CRYPTO)
+### 10pts Challenge Name
+[**Challenge:**]() ``````<br>
+[**Solution:**]() ``````
 Challenge Description
 Morse code
 
@@ -224,8 +215,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-### Networking
-#### 10pts Challenge Name
+<br>
+
+## Networking
+### 10pts Challenge Name
 Challenge Description
 Open a capture in wireshark and get some statistic like the start date
 
@@ -285,8 +278,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-### Forensics
-#### 10pts Challenge Name
+<br>
+
+## Forensics
+### 10pts Challenge Name
 Challenge Description
 Strings
 
