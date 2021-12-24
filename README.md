@@ -20,23 +20,25 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 # Challenges
 | Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Forensics](#forensics) |
-|:----:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|  10  | Inspector Gadget | Execution          | Challenge | Challenge | Challenge |
-|  25  | The Middleman    | Telegram           | Challenge | Challenge | Challenge |
-|  50  | Get Out          | Fast and Furious   | Challenge | Challenge | Challenge |
-|  50  | Mr. Robot        | Stacked            | Challenge | Challenge | Challenge |
-|  50  | Cookie Monster   | Ready, Aim, Fire   | Challenge | Challenge | Challenge |
-|  90  | The Postman      | Return of the King | Challenge | Challenge | Challenge |
+|:----:|:----------------:|:------------------:|:--------------:|:----------------:|:----------------:|
+|  10  | Inspector Gadget | Execution          | Titanic        | Challenge | Challenge |
+|  25  | The Middleman    | Telegram           | Cleopatra      | Challenge | Challenge |
+|  50  | Get Out          | Fast and Furious   | Da Vinci Code  | Challenge | Challenge |
+|  50  | Mr. Robot        | Stacked            | Imitation Game | Challenge | Challenge |
+|  50  | Cookie Monster   | Ready, Aim, Fire   | Codebreaker    | Challenge | Challenge |
+|  90  | The Postman      | Return of the King | Enigma         | Challenge | Challenge |
 
 <br>
 
 ## Getting Started
 ### WELCOME [1pt] For the Flag
-[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```<br>
+> FBC{some_long_flag_like_this}
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
 **Teaching Points:** This is how all Jeapordy CTFs work and its going to get them used to our flag format so that they have a crib in some cases or just so they know what they're looking for.
+
 
 <br>
 
@@ -143,19 +145,18 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 ## Cryptography (CRYPTO)
-### 10pts Challenge Name
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
-Challenge Description
-Morse code
+### CRYPTO [10pts] Titanic
+[**Challenge:**](challenges/cipher1-ascii) ```challenges/cipher1-ascii```<br>
+[**Solution:**](solutions/crypto/titanic) ```solutions/crypto/titanic```
 
-Intended Solution Writeup
+**Intended Solution:** The student starts off with a repeating pattern of dots and dashes. They google for what that pattern could be and quickly identify that it is morse code. They then use a morse decoder to retrieve the plaintext.
 
-Teaching points
+**Teaching Points:** Most importantly, the student learns that there is ciphertext and plaintext and that we can often convert between them using an algorithm. We start to introduce the idea that ciphers can be recognized based on patterns of characters.
 
-Solution POC: ```relative/path/here```
+### CRYPTO [25pts] Cleopatra
+[**Challenge:**](challenges/cipher2-ascii) ```challenges/cipher2-ascii```<br>
+[**Solution:**](solutions/crypto/cleopatra) ```solutions/crypto/cleopatra```
 
-#### 25pts
 Challenge Description
 Caesar cipher non13
 
@@ -165,7 +166,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-#### 50pts
+### CRYPTO [50pts] Da Vinci Code
+[**Challenge:**](challenges/cipher3-ascii) ```challenges/cipher3-ascii```<br>
+[**Solution:**](solutions/crypto/da_vinci) ```solutions/crypto/da_vinci```
+
 Challenge Description
 XOR with a provided key
 
@@ -175,7 +179,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-#### 50pts
+### CRYPTO [50pts] Imitation Game
+[**Challenge:**](challenges/cipher4-ascii) ```challenges/cipher4-ascii```<br>
+[**Solution:**](solutions/crypto/imitation_game) ```solutions/crypto/imitation_game```
+
 Challenge Description
 Something thats run x3, base64, then morse, then rot
 
@@ -185,7 +192,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-#### 50pts
+### CRYPTO [50pts] Codebreaker
+[**Challenge:**](challenges/cipher5-ascii) ```challenges/cipher5-ascii```<br>
+[**Solution:**](solutions/crypto/codebreaker) ```solutions/crypto/codebreaker```
+
 Challenge Description
 XOR brute force for a single byte
 
@@ -195,7 +205,10 @@ Teaching points
 
 Solution POC: ```relative/path/here```
 
-#### 90pts
+### CRYPTO [90pts] Enigma
+[**Challenge:**](challenges/cipher6-ascii) ```challenges/cipher6-ascii```<br>
+[**Solution:**](solutions/crypto/enigma) ```solutions/crypto/enigma```
+
 Challenge Description
 XOR byte force with a 4 byte key repeated, with a crib
 
@@ -208,6 +221,9 @@ Solution POC: ```relative/path/here```
 <br>
 
 ## Networking
+[**Challenge:**]() ``````<br>
+[**Solution:**]() ``````
+
 ### 10pts Challenge Name
 Challenge Description
 Open a capture in wireshark and get some statistic like the start date
