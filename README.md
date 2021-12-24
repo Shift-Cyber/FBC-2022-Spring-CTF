@@ -32,8 +32,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ## Getting Started
 ### WELCOME [1pt] For the Flag
-[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```<br>
-> FBC{some_long_flag_like_this}
+[**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
@@ -46,6 +46,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [10pts] Inspector Gadget
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
+> FBC{flag_placeholder}
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
