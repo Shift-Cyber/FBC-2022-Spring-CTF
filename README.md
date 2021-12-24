@@ -19,14 +19,14 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 # Challenges
-| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Forensics](#forensics) |
-|:----:|:----------------:|:------------------:|:--------------:|:----------------:|:----------------:|
-|  10  | Inspector Gadget | Execution          | Titanic        | Shark Week      | Challenge |
-|  25  | The Middleman    | Telegram           | Cleopatra      | The Matrix      | Challenge |
-|  50  | Get Out          | Fast and Furious   | Da Vinci Code  | Parasite        | Challenge |
-|  50  | Mr. Robot        | Stacked            | Imitation Game | Polaroid        | Challenge |
-|  50  | Cookie Monster   | Ready, Aim, Fire   | Codebreaker    | Spy Kids        | Challenge |
-|  90  | The Postman      | Return of the King | Enigma         | You've Got Mail | Challenge |
+| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reverse Engineering](#reverse-engineering) |
+|:----:|:----------------:|:------------------:|:--------------:|:----------------:|:-----------------:|
+|  10  | Inspector Gadget | Execution          | Titanic        | Shark Week      | The Strings        |
+|  25  | The Middleman    | Telegram           | Cleopatra      | The Matrix      | Arrival            |
+|  50  | Get Out          | Fast and Furious   | Da Vinci Code  | Parasite        | Hidden Figures     |
+|  50  | Mr. Robot        | Stacked            | Imitation Game | Polaroid        | Hidden Places      |
+|  50  | Cookie Monster   | Ready, Aim, Fire   | Codebreaker    | Spy Kids        | Eraser             |
+|  90  | The Postman      | Return of the King | Enigma         | You've Got Mail | Mission Impossible |
 
 <br>
 
@@ -101,7 +101,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ## Binary Exploitation (BINEX)
 ### BINEX [10pts] Execution
-[**Challenge:**](challenges/01-ELFx86) ```challenges/x86-elf-binary-1```<br>
+[**Challenge:**](challenges/binary01-ELFx86) ```challenges/binary01-ELFx86```<br>
 [**Solution:**](solutions/binex/execution) ```solutions/binex/execution```
 > FBC{flag_placeholder}
 
@@ -215,7 +215,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ## Networking
 ### NET [10pts] Shark Week
-[**Challenge:**](challenges/pcapng1) ```challenges/pcapng1```<br>
+[**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/shark_week) ```solutions/networking/shark_week```
 > FBC{flag_placeholder}
 
@@ -233,7 +233,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** The idea of this problem is to demonstrat what a bit is actually for. But it also introduces the idea of subnets and segregation. Its a little loose honestly, but this hopefully feels related to the networking classes.
 
 #### NET [50pts] Parasite
-[**Challenge:**](challenges/pcapng1) ```challenges/pcapng1```<br>
+[**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/parasite) ```solutions/networking/parasite```
 > FBC{flag_placeholder}
 
@@ -242,7 +242,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** We continue to introduce the idea of finding more data in a packet capture. Now we discuss the real-world concept of DNS lookups by either malware or clients to determine whats going on in a capture. This is essentially an introduction to DNS.
 
 #### NET [50pts] Polaroid
-[**Challenge:**](challenges/pcapng1) ```challenges/pcapng1```<br>
+[**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/polaroid) ```solutions/networking/polaroid```
 > FBC{flag_placeholder}
 
@@ -251,7 +251,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** Here we continue to introduce the idea of dumping data out of connections. We start with HTTP and simply show that the images that webpages are loading can be extracted from the packet capture and saved for forensic purposes.
 
 ### NET [50pts] Spy Kids
-[**Challenge:**](challenges/pcapng1) ```challenges/pcapng1```<br>
+[**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/spy_kids) ```solutions/networking/spy_kids```
 > FBC{flag_placeholder}
 
@@ -270,81 +270,57 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 <br>
 
-## Forensics
-### 10pts Challenge Name
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+## Reverse Engineering
+### REVERSE [10pts] The Strings
+[**Challenge:**](challenges/binary02-data) ```challenges/binary02-data```<br>
+[**Solution:**](solutions/re/the_strings) ```solutions/re/the_strings```
 > FBC{flag_placeholder}
-Challenge Description
-Strings
 
-Intended Solution Writeup
+**Intended Solution:** Simply run strings on a binary to extract all the data. This will be a large data blob like 10MB, so you wont be able to just read it. Need to grep for the flag handle FBC{.
 
-Teaching points
+**Teaching Points:** Alot of important data can be extracted from binaries by using the strings command to find printable characters. This is an imporant principle for all symbol lookup in all reversing.
 
-Solution POC: ```relative/path/here```
-
-#### 25pts
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+### REVERSE [25pts] Arrival
+[**Challenge:**](challenges/binary03-ELFx86_64) ```challenges/binary03-ELFx86_64```<br>
+[**Solution:**](solutions/re/arrival) ```solutions/re/arrival```
 > FBC{flag_placeholder}
-Challenge Description
-Identify the entry point of a binary
 
-Intended Solution Writeup
+**Intended Solution:** Once the entry point has been identified, submit it to the binary you're running locally and the binary dumps the flag to STDOUT if its correct. The tool of choice here is likely to be readelf, but there are a variety of options.
 
-Teaching points
+**Teaching Points:** One of the first things we need to do when reversing a binary, is to find the entry point. Entry points are where the code starts executing so this is of course important. This also teaches the student to run a binary if they havent done this yet.
 
-Solution POC: ```relative/path/here```
-
-#### 50pts
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+### REVERSE [50pts] Hidden Figures
+[**Challenge:**](challenges/image01-jpeg) ```challenges/image01-jpeg```<br>
+[**Solution:**](solutions/re/hidden_figures) ```solutions/re/hidden_figures```
 > FBC{flag_placeholder}
-Challenge Description
-Steghide extract without a password
 
-Intended Solution Writeup
+**Intended Solution:** This challenge introduces data embedded in other data without be aparent. Here the user must binwalk an image file to dump a zip out of it. Simple binwalk -e does the trick.
 
-Teaching points
+**Teaching Points:** Here we introduce that data can be hidden in other data. This is really relevant to embedded reverse engineering where we just have data blobs and must idenitfy headers in those blobs to extract the information we want.
 
-Solution POC: ```relative/path/here```
-
-#### 50pts
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+### REVERSE [50pts] Hidden Places
+[**Challenge:**](challenges/pcapng02-usb) ```challenges/pcapng02-usb```<br>
+[**Solution:**](solutions/re/hidden_places) ```solutions/re/hidden_places```
 > FBC{flag_placeholder}
-Challenge Description
-log investigation for an event or credentials
 
-Intended Solution Writeup
+**Intended Solution:** Here we have a USB bus capture and must extract the keystrokes. This can be done by HID table looup, but there are much simpler existing scripts to acomplish the same thing.
 
-Teaching points
+**Teaching Points:** Now we introduce that data in packet captures doesn't necessarily have to be IP. There are other protocols out there in the world and USB captures are one of the common ones we find. Wireshark can handle these as well as plent of others.
 
-Solution POC: ```relative/path/here```
-
-#### 50pts
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+### REVERSE [50pts] Eraser
+[**Challenge:**](challenges/binary04-ext4) ```challenges/binary04-ext4```<br>
+[**Solution:**](solutions/re/eraser) ```solutions/re/eraser```
 > FBC{flag_placeholder}
-Challenge Description
-mount a disk image and read the flag file out
 
-Intended Solution Writeup
+**Intended Solution:** This challenge requires the competitor to mount a disk image locally on their system and read the flag.txt file off the image. This can be done with a simply mount command in linux once they use file to identify the image type.
 
-Teaching points
+**Teaching Points:** Here we introduce another way to package data, iamge files. This is very important for reverse engineering when image files are recieved and therefor this challenge leads into a very valuable skill in the real world.
 
-Solution POC: ```relative/path/here```
-
-#### 90pts
+### REVERSE [90pts] Mission Impossible
 [**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
+[**Solution:**](solutions/re/mission_impossible) ```solutions/re/mission_impossible```
 > FBC{flag_placeholder}
-Challenge Description
-Bypass a login check, impossible password style, using gdb to get the flag
 
-Intended Solution Writeup
+**Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the flag function.
 
-Teaching points
-
-Solution POC: ```relative/path/here```
+**Teaching Points:** This is some legitimate reversing skills. We are starting to teach binary navigation in a debugger and the idea that you can control anything happening locally, so if a function is generating something you want and you have a binary, you can simply identify it and generally force it to execute.
