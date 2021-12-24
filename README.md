@@ -20,23 +20,25 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 # Challenges
 | Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Forensics](#forensics) |
-|:----:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|  10  | Inspector Gadget | Execution          | Challenge | Challenge | Challenge |
-|  25  | The Middleman    | Telegram           | Challenge | Challenge | Challenge |
-|  50  | Get Out          | Fast and Furious   | Challenge | Challenge | Challenge |
-|  50  | Mr. Robot        | Stacked            | Challenge | Challenge | Challenge |
-|  50  | Cookie Monster   | Ready, Aim, Fire   | Challenge | Challenge | Challenge |
-|  90  | The Postman      | Return of the King | Challenge | Challenge | Challenge |
+|:----:|:----------------:|:------------------:|:--------------:|:----------------:|:----------------:|
+|  10  | Inspector Gadget | Execution          | Titanic        | Challenge | Challenge |
+|  25  | The Middleman    | Telegram           | Cleopatra      | Challenge | Challenge |
+|  50  | Get Out          | Fast and Furious   | Da Vinci Code  | Challenge | Challenge |
+|  50  | Mr. Robot        | Stacked            | Imitation Game | Challenge | Challenge |
+|  50  | Cookie Monster   | Ready, Aim, Fire   | Codebreaker    | Challenge | Challenge |
+|  90  | The Postman      | Return of the King | Enigma         | Challenge | Challenge |
 
 <br>
 
 ## Getting Started
 ### WELCOME [1pt] For the Flag
 [**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
 **Teaching Points:** This is how all Jeapordy CTFs work and its going to get them used to our flag format so that they have a crib in some cases or just so they know what they're looking for.
+
 
 <br>
 
@@ -44,56 +46,52 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [10pts] Inspector Gadget
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
+> FBC{flag_placeholder}
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
 **Teaching Points:** Web servers dont have to run on the standard port 80 and we can access them by specify the port explicitly. Additionally, the HTML that the browser is displaying might have notable secrets.
 
----
-
 ### WEBEX [25pts] The Middleman
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/the_middleman) ```solutions/web/the_middleman```
+> FBC{flag_placeholder}
 
 **Intended Solution:** The competitor sets up a web proxy, ideally BurpSuite Community and using that web proxy intercepts web requests between the client browser and web server. The flag is in a XFLAG header.
 
 **Teaching Points** Here we introudce the idea of a web proxy and the concept that browers and servers are simply operating in a client-server relationship.
 
----
-
 ### WEBEX [50pts] Get Out
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/get_out) ```solutions/web/get_out```
+> FBC{flag_placeholder}
 
 **Intended Solution:** After navigating around the page and inspecting that the hyperlinks simply change a GET parameter, the user finds a code comment TODO saying that the "flag" button hasnt been implemented yet. They forecfully submit "flag" as the GET param to display the flag image.
 
 **Teaching Points:** GET requests power the internet; the primary teaching point is what a GET request is and how parameter data is passed from the client to server. Additionally, how it can be manipulated.
 
----
-
 ### WEBEX [50pts] Mr. Robot
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/mr_robot) ```solutions/web/mr_robot```
+> FBC{flag_placeholder}
 
 **Intended Solution:** User performs standard webapp reconisance and identifies an active robots.txt page. This page has an admin page that should be behind auth but is accessible. The user forecfully browses to the page for the flag.
 
 **Teaching Points:** First and foremost we teach what the robots RFC is and why its implemented for spiders. Then there is the idea that sometimes its used to hiden sensitive pages and can therefore expose them. Lastly, foreful browsing.
 
----
-
 ### WEBEX [50pts] Cookie Monster
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
 [**Solution:**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
 
 **Teaching Points:** Cookies are simply another header in the web request and they are used for a variety of things but simply put are a way for a client to track information and send it to and from a web server.
 
----
-
 ### WEBEX [90pts] The Postman
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
 [**Solution:**](solutions/web/the_postman) ```solutions/web/the_postman```
+> FBC{flag_placeholder}
 
 **Intended Solution:** User is given the login credentails but is told the page is submitting the wrong credentials due to a client-side bug. They manually set the POST parameters to login with the provided credentials successfully.
 
@@ -105,6 +103,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [10pts] Execution
 [**Challenge:**](challenges/01-ELFx86) ```challenges/x86-elf-binary-1```<br>
 [**Solution:**](solutions/binex/execution) ```solutions/binex/execution```
+> FBC{flag_placeholder}
 
 **Intended Solution:** The competitor will recieve the binary and must run it in order to recieve the flag, this means downloading it to an approperiate directory and setting executable, then running it.
 
@@ -113,6 +112,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [25pts] Telegram
 [**Challenge:**](challenges/tcp5555-socket-python3) ```challenges/tcp5555-socket-python3```<br>
 [**Solution:**](solutions/binex/telegram) ```solutions/binex/telegram```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Here the competitor connects to a socket and must recieve a message. This is intended to be done with netcat but could teheoritically be done with pwntools or raw socket programming in any language.
 
@@ -121,6 +121,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [50pts] Fast and Furious
 [**Challenge:**](challenges/tcp1234-socket-python3) ```challenges/tcp1234-socket-python3```<br>
 [**Solution:**](solutions/binex/fast_and_furious) ```solutions/binex/fast_and_furious```
+> FBC{flag_placeholder}
 
 **Intended Solution:** The competitor starts from a similar place with generic socket programming, but now must script in order to both send AND recieve from the socket 100 times within 10 seconds. This has to be scripted due to the time requirement.
 
@@ -129,6 +130,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [50pts] Stacked
 [**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp5678-socket-python3```<br>
 [**Solution:**](solutions/binex/stacked) ```solutions/binex/stacked```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Now the competitor has a variable loaded onto the stack and must overwrite the contents via overflow. When that happens on the remote machine logic checks determine the variable was overflowed and print a value to the screen.
 
@@ -137,6 +139,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [50pts] Ready, Aim, Fire
 [**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp6789-socket-python3```<br>
 [**Solution:**](solutions/binex/ready_aim_fire) ```solutions/binex/ready_aim_fire```
+> FBC{flag_placeholder}
 
 **Intended Solution:** Now the competitor must calculate at exactly what offset the overflow is happening and replace those specific bytes with a non-printable byte pattern. This means pattern creation and matching.
 
@@ -145,6 +148,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [90pts] Return of the King
 [**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp8888-socket-python3```<br>
 [**Solution:**](solutions/binex/return_of_the_king) ```solutions/binex/return_of_the_king```
+> FBC{flag_placeholder}
 
 **Intended Solution:** In the final binex challenge, we are overwriting with an actual address for simluated code execution. Here the user now must use the obtained shell to cat the flag file.
 
@@ -153,71 +157,67 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 ## Cryptography (CRYPTO)
-### 10pts Challenge Name
-[**Challenge:**]() ``````<br>
-[**Solution:**]() ``````
-Challenge Description
-Morse code
+### CRYPTO [10pts] Titanic
+[**Challenge:**](challenges/cipher1-ascii) ```challenges/cipher1-ascii```<br>
+[**Solution:**](solutions/crypto/titanic) ```solutions/crypto/titanic```
+> FBC{flag_placeholder}
 
-Intended Solution Writeup
+**Intended Solution:** The student starts off with a repeating pattern of dots and dashes. They google for what that pattern could be and quickly identify that it is morse code. They then use a morse decoder to retrieve the plaintext.
 
-Teaching points
+**Teaching Points:** Most importantly, the student learns that there is ciphertext and plaintext and that we can often convert between them using an algorithm. We start to introduce the idea that ciphers can be recognized based on patterns of characters.
 
-Solution POC: ```relative/path/here```
+### CRYPTO [25pts] Cleopatra
+[**Challenge:**](challenges/cipher2-ascii) ```challenges/cipher2-ascii```<br>
+[**Solution:**](solutions/crypto/cleopatra) ```solutions/crypto/cleopatra```
+> FBC{flag_placeholder}
 
-#### 25pts
-Challenge Description
-Caesar cipher non13
+**Intended Solution:** Student identifies that the provided text already almost looks like a flag with FBC{.*}. Then determines that everything is alphanumeric, starts looking up common ciphers and trys ceaser brute force which works.
 
-Intended Solution Writeup
+**Teaching Points:** Here we build on top of the idea of plaintext to ciphertext conversion and introduce the idea of a key applying to the transaction. Ceaser is a great cipher for this because they key space is tiny but it requires some lateral thinking. This is why we dont just use rot13.
 
-Teaching points
+### CRYPTO [50pts] Da Vinci Code
+[**Challenge:**](challenges/cipher3-ascii) ```challenges/cipher3-ascii```<br>
+[**Solution:**](solutions/crypto/da_vinci) ```solutions/crypto/da_vinci```
+> FBC{flag_placeholder}
 
-Solution POC: ```relative/path/here```
+**Intended Solution:** Challenge description provides enough to get that there is some sort of byte for byte operation required, this gets a googlable result for XOR. Key is also provided so this is a big hint. Student uses cyberchef to decrypt.
 
-#### 50pts
-Challenge Description
-XOR with a provided key
+**Teaching Points:** Continuing to build, we now have a cipher with a nonprintable key. This introduces the idea of a real key at a very low level and increases the key space from the previous problem a bit so its less "guessable. XORs are used in almost all modern ciphers so this is real world.
 
-Intended Solution Writeup
+### CRYPTO [50pts] Imitation Game
+[**Challenge:**](challenges/cipher4-ascii) ```challenges/cipher4-ascii```<br>
+[**Solution:**](solutions/crypto/imitation_game) ```solutions/crypto/imitation_game```
+> FBC{flag_placeholder}
 
-Teaching points
+**Intended Solution:** First sees a pattern ending in double equal sign and google tells them this is base64. When they decode this, it clearly becomes morse, which finally clearly becomes rot13. Cyberchef for all operations.
 
-Solution POC: ```relative/path/here```
+**Teaching Points:** This problem is designed to enforce pattern recognition and introduce the idea that sometimes the plantext has been maniupulated multiple times.
 
-#### 50pts
-Challenge Description
-Something thats run x3, base64, then morse, then rot
+### CRYPTO [50pts] Codebreaker
+[**Challenge:**](challenges/cipher5-ascii) ```challenges/cipher5-ascii```<br>
+[**Solution:**](solutions/crypto/codebreaker) ```solutions/crypto/codebreaker```
+> FBC{flag_placeholder}
 
-Intended Solution Writeup
+**Intended Solution:** Now that the user knows how to XOR with an known single-byte key they need to brute force for a single byte in order to do the same thing. This can be done with cyberchef or with python.
 
-Teaching points
+**Teaching Points:** This forces the competitor to realize that the key space is small and they can simply try every option, but enforces that they must understand how to send or at least work-with non-printable characters.
 
-Solution POC: ```relative/path/here```
+### CRYPTO [90pts] Enigma
+[**Challenge:**](challenges/cipher6-ascii) ```challenges/cipher6-ascii```<br>
+[**Solution:**](solutions/crypto/enigma) ```solutions/crypto/enigma```
+> FBC{flag_placeholder}
 
-#### 50pts
-Challenge Description
-XOR brute force for a single byte
+**Intended Solution:** Here the keyspace is 4 million-ish and while this would technically work, its much more efficient to crib a byte at a time. The idea is that they will brute force a byte at a time, saving the "solved" byte and continue to crib for the flag header. This reduces the total checks to 256*4 rather than 256^4.
 
-Intended Solution Writeup
-
-Teaching points
-
-Solution POC: ```relative/path/here```
-
-#### 90pts
-Challenge Description
-XOR byte force with a 4 byte key repeated, with a crib
-
-Intended Solution Writeup
-
-Teaching points
-
-Solution POC: ```relative/path/here```
+**Teaching Points:** Here we introduce longer keys but talk about an actual real-world cryptographic weakness. If we have a known-plaintext and a short repeated key, we can simply crib for the plaintext as we interate through a smaller keyspace, slowly determining the key. This is borderline real-world and much easier than it sounds.
 
 <br>
 
 ## Networking
+[**Challenge:**]() ``````<br>
+[**Solution:**]() ``````
+> FBC{flag_placeholder}
+
 ### 10pts Challenge Name
 Challenge Description
 Open a capture in wireshark and get some statistic like the start date
