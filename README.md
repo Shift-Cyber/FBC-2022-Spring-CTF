@@ -189,8 +189,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 [**Solution:**](solutions/crypto/imitation_game) ```solutions/crypto/imitation_game```
 > FBC{flag_placeholder}
 
-Challenge Description
-
 **Intended Solution:** First sees a pattern ending in double equal sign and google tells them this is base64. When they decode this, it clearly becomes morse, which finally clearly becomes rot13. Cyberchef for all operations.
 
 **Teaching Points:** This problem is designed to enforce pattern recognition and introduce the idea that sometimes the plantext has been maniupulated multiple times.
