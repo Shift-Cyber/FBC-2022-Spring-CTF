@@ -21,4 +21,6 @@ RUN chown -R return-of-the-king:return-of-the-king /home/return-of-the-king
 
 USER return-of-the-king
 EXPOSE 6000
+CMD chmod +x ynetd
+CMD chmod +x vuln
 CMD /usr/bin/ynetd -p 6000 ./vuln
