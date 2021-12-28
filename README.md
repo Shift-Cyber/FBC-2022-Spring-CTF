@@ -119,7 +119,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** This is designed to be a ramp up to sending and recieving an actual exploit across a socket remotely. The idea being that we first teach basic socket programming, then stack on top of it with pwntools.
 
 ### BINEX [50pts] Fast and Furious
-[**Challenge:**](challenges/tcp1234-socket-python3) ```challenges/tcp1234-socket-python3```<br>
+[**Challenge:**](challenges/tcp1234-socket-ynetd) ```challenges/tcp1234-socket-ynetd```<br>
 [**Solution:**](solutions/binex/fast_and_furious) ```solutions/binex/fast_and_furious```
 > FBC{flag_placeholder}
 
@@ -160,7 +160,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### CRYPTO [10pts] Titanic
 [**Challenge:**](challenges/cipher1-ascii) ```challenges/cipher1-ascii```<br>
 [**Solution:**](solutions/crypto/titanic) ```solutions/crypto/titanic```
-> FBC{flag_placeholder}
+> THEY_DEFINITELY_SAID_THIS_SHIP_CAN'T_SINK
 
 **Intended Solution:** The student starts off with a repeating pattern of dots and dashes. They google for what that pattern could be and quickly identify that it is morse code. They then use a morse decoder to retrieve the plaintext.
 
@@ -169,7 +169,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### CRYPTO [25pts] Cleopatra
 [**Challenge:**](challenges/cipher2-ascii) ```challenges/cipher2-ascii```<br>
 [**Solution:**](solutions/crypto/cleopatra) ```solutions/crypto/cleopatra```
-> FBC{flag_placeholder}
+> FBC{looks_even_more_like_a_FLAG_now_doesn't_it}
 
 **Intended Solution:** Student identifies that the provided text already almost looks like a flag with FBC{.*}. Then determines that everything is alphanumeric, starts looking up common ciphers and trys ceaser brute force which works.
 
@@ -178,7 +178,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### CRYPTO [50pts] Da Vinci Code
 [**Challenge:**](challenges/cipher3-ascii) ```challenges/cipher3-ascii```<br>
 [**Solution:**](solutions/crypto/da_vinci) ```solutions/crypto/da_vinci```
-> FBC{flag_placeholder}
+> FBC{xor_is_the_backbone_of_modern_cryptography}
 
 **Intended Solution:** Challenge description provides enough to get that there is some sort of byte for byte operation required, this gets a googlable result for XOR. Key is also provided so this is a big hint. Student uses cyberchef to decrypt.
 
@@ -187,16 +187,16 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### CRYPTO [50pts] Imitation Game
 [**Challenge:**](challenges/cipher4-ascii) ```challenges/cipher4-ascii```<br>
 [**Solution:**](solutions/crypto/imitation_game) ```solutions/crypto/imitation_game```
-> FBC{flag_placeholder}
+> HOWS_YOUR_PATTERN_RECOGNITION_NOW?
 
-**Intended Solution:** First sees a pattern ending in double equal sign and google tells them this is base64. When they decode this, it clearly becomes morse, which finally clearly becomes rot13. Cyberchef for all operations.
+**Intended Solution:** First sees a pattern ending in double equal sign and google tells them this is base64. When they decode this, it clearly becomes morse, which finally clearly becomes rot13. Cyberchef for all operations. Base64 -> Morse -> Rot13
 
 **Teaching Points:** This problem is designed to enforce pattern recognition and introduce the idea that sometimes the plantext has been maniupulated multiple times.
 
 ### CRYPTO [50pts] Codebreaker
 [**Challenge:**](challenges/cipher5-ascii) ```challenges/cipher5-ascii```<br>
 [**Solution:**](solutions/crypto/codebreaker) ```solutions/crypto/codebreaker```
-> FBC{flag_placeholder}
+> FBC{why_not_try_them_all?}
 
 **Intended Solution:** Now that the user knows how to XOR with an known single-byte key they need to brute force for a single byte in order to do the same thing. This can be done with cyberchef or with python.
 
@@ -205,7 +205,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### CRYPTO [90pts] Enigma
 [**Challenge:**](challenges/cipher6-ascii) ```challenges/cipher6-ascii```<br>
 [**Solution:**](solutions/crypto/enigma) ```solutions/crypto/enigma```
-> FBC{flag_placeholder}
+> FBC{known_plaintext?_crib_your_way_to_victory}
 
 **Intended Solution:** Here the keyspace is 4 million-ish and while this would technically work, its much more efficient to crib a byte at a time. The idea is that they will brute force a byte at a time, saving the "solved" byte and continue to crib for the flag header. This reduces the total checks to 256*4 rather than 256^4.
 
