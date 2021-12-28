@@ -110,7 +110,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** Here we are teaching that a binary will always be downloaded as 600 perms and needs to get executable perms in order to execute. Also loosely that anything can be set executable. Basically just how to run executables on a linux machine.
 
 ### BINEX [25pts] Telegram
-[**Challenge:**](challenges/tcp5555-socket-python3) ```challenges/tcp5555-socket-python3```<br>
+[**Challenge:**](challenges/tcp5555-socket-ynetd) ```challenges/tcp5555-socket-ynetd```<br>
 [**Solution:**](solutions/binex/telegram) ```solutions/binex/telegram```
 > FBC{flag_placeholder}
 
@@ -128,7 +128,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** Here we continue to staack on top of the socket programming concepts. The goal is to get a student to be able to recieve a program prompt or arbitrary data and handle that before sending a payload.
 
 ### BINEX [50pts] Stacked
-[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp5678-socket-python3```<br>
+[**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/stacked) ```solutions/binex/stacked```
 > FBC{flag_placeholder}
 
@@ -137,7 +137,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** We continue to build towards a stack overflow exploit for the purpose of RCE, here introducing the overwriting of variables on the stack. The user will get the source code here so they can undrstand whats going on behind the scenes a bit.
 
 ### BINEX [50pts] Ready, Aim, Fire
-[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp6789-socket-python3```<br>
+[**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/ready_aim_fire) ```solutions/binex/ready_aim_fire```
 > FBC{flag_placeholder}
 
@@ -146,7 +146,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** Continuing to build on the overflow logic, here we are introducing the idea of calculating where you have control. Offset calculation is critical to obtaining eventual code execution and this is the final step prior to overwriting with real addresses.
 
 ### BINEX [90pts] Return of the King
-[**Challenge:**](challenges/tcp6000-socket-python3) ```challenges/tcp8888-socket-python3```<br>
+[**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/return_of_the_king) ```solutions/binex/return_of_the_king```
 > FBC{flag_placeholder}
 
