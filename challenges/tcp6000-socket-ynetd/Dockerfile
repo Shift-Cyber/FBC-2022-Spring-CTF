@@ -1,5 +1,5 @@
 # sudo docker build -t challenge_tcp6000 .
-# sudo docker run -d -p 6000:6000 --rm -it --name FBC_tcp6000 challenge_tcp6000
+# sudo docker run -d -p 6000:6000 --rm --name FBC_tcp6000 challenge_tcp6000
 
 FROM ubuntu:20.04
 
