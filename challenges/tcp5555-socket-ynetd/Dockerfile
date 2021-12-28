@@ -18,4 +18,6 @@ RUN chown -R telegram:telegram /home/telegram
 
 USER telegram
 EXPOSE 5555
+CMD chmod +x ynetd
+CMD chmod +x telegram
 CMD /usr/bin/ynetd -p 5555 ./telegram
