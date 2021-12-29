@@ -319,7 +319,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### REVERSE [90pts] Mission Impossible
 [**Challenge:**](challenges/binary05-ELFx86) ```challenges/binary05-ELFx86```<br>
 [**Solution:**](solutions/re-forensics/mission_impossible) ```solutions/re-forensics/mission_impossible```
-> FBC{flag_placeholder}
+> flag{mission_not_that_impossible}
 
 **Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the flag function.
 
