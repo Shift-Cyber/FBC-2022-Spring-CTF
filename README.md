@@ -299,9 +299,9 @@ These prizes are set for each position, however, prizes are actually picked in t
 **Teaching Points:** Here we introduce that data can be hidden in other data. This is really relevant to embedded reverse engineering where we just have data blobs and must idenitfy headers in those blobs to extract the information we want.
 
 ### REVERSE [50pts] Hidden Places
-[**Challenge:**](challenges/pcapng02-usb) ```challenges/pcapng02-usb```<br>
+[**Challenge:**](challenges/pcapng02-usb) ```challenges/pcap02-usb```<br>
 [**Solution:**](solutions/re/hidden_places) ```solutions/re/hidden_places```
-> FBC{flag_placeholder}
+> FBC{wireshark_is_a_protocol_analyzer} || FBC{wireshark_is_a_protocol_analyzeer} || fbc[wireshark-is-a-protocol-analyzer] || fbc[wireshark-is-a-protocol-analyzeer]
 
 **Intended Solution:** Here we have a USB bus capture and must extract the keystrokes. This can be done by HID table looup, but there are much simpler existing scripts to acomplish the same thing.
 
