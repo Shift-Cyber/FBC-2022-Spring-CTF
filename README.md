@@ -46,7 +46,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [10pts] Inspector Gadget
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
-> FBC{flag_placeholder}
+> FBC{have_you_got_what_it_takes?}
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
