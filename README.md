@@ -274,7 +274,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### REVERSE [10pts] The Strings
 [**Challenge:**](challenges/binary02-data) ```challenges/binary02-data```<br>
 [**Solution:**](solutions/re/the_strings) ```solutions/re/the_strings```
-> FBC{flag_placeholder}
+> FBC{now_thats_what_i_call_ascii}
 
 **Intended Solution:** Simply run strings on a binary to extract all the data. This will be a large data blob like 10MB, so you wont be able to just read it. Need to grep for the flag handle FBC{.
 
@@ -283,7 +283,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### REVERSE [25pts] Arrival
 [**Challenge:**](challenges/binary03-ELFx86_64) ```challenges/binary03-ELFx86_64```<br>
 [**Solution:**](solutions/re/arrival) ```solutions/re/arrival```
-> FBC{flag_placeholder}
+> FBC{this_is_where_it_all_begins}
 
 **Intended Solution:** Once the entry point has been identified, submit it to the binary you're running locally and the binary dumps the flag to STDOUT if its correct. The tool of choice here is likely to be readelf, but there are a variety of options.
 
@@ -292,9 +292,9 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### REVERSE [50pts] Hidden Figures
 [**Challenge:**](challenges/image01-jpeg) ```challenges/image01-jpeg```<br>
 [**Solution:**](solutions/re/hidden_figures) ```solutions/re/hidden_figures```
-> FBC{flag_placeholder}
+> FBC{feline_meme_vault}
 
-**Intended Solution:** This challenge introduces data embedded in other data without be aparent. Here the user must binwalk an image file to dump a zip out of it. Simple binwalk -e does the trick.
+**Intended Solution:** This challenge introduces data embedded in other data without being aparent. This is more CTF focused than RE admittedly but its interesting and fun so its a good CTF problem. Steghide extract -sf cat.jpg does the trick.
 
 **Teaching Points:** Here we introduce that data can be hidden in other data. This is really relevant to embedded reverse engineering where we just have data blobs and must idenitfy headers in those blobs to extract the information we want.
 
