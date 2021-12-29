@@ -19,7 +19,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 # Challenges
-| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reversing](#reverse-engineering) |
+| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reversing & Forensics](#Reversing-&-Forensics) |
 |:----:|:----------------:|:------------------:|:--------------:|:----------------:|:-----------------:|
 |  10  | Inspector Gadget | Execution          | Titanic        | Shark Week      | The Strings        |
 |  25  | The Middleman    | Telegram           | Cleopatra      | The Matrix      | Arrival            |
@@ -316,7 +316,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Teaching Points:** Here we introduce another way to package data, image files. This is very important for reverse engineering when image files are recieved and therefor this challenge leads into a very valuable skill in the real world.
 
-### REVERSE [90pts] The Impossible
+### REVERSE [90pts] Mission Impossible
 [**Challenge:**](challenges/binary05-ELFx86) ```challenges/binary05-ELFx86```<br>
 [**Solution:**](solutions/re-forensics/mission_impossible) ```solutions/re-forensics/mission_impossible```
 > FBC{flag_placeholder}
