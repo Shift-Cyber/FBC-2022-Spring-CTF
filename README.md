@@ -19,7 +19,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 <br>
 
 # Challenges
-| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [Reversing & Forensics](#Reversing-&-Forensics) |
+| Pts | [Web Exploitation](#web-exploitation-webex) | [Binary Exploitation](#binary-exploitation-binex) | [Cryptography](#cryptography-crypto) | [Networking](#networking) | [RE & Forensics](#Reversing-&-Forensics) |
 |:----:|:----------------:|:------------------:|:--------------:|:----------------:|:-----------------:|
 |  10  | Inspector Gadget | Execution          | Titanic        | Shark Week      | The Strings        |
 |  25  | The Middleman    | Telegram           | Cleopatra      | The Matrix      | Arrival            |
