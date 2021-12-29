@@ -321,6 +321,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 [**Solution:**](solutions/re-forensics/mission_impossible) ```solutions/re-forensics/mission_impossible```
 > flag{mission_not_that_impossible}
 
-**Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the flag function.
+**Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the defuse_bomb function to foce the flag to stdout.
 
 **Teaching Points:** This is some legitimate reversing skills. We are starting to teach binary navigation in a debugger and the idea that you can control anything happening locally, so if a function is generating something you want and you have a binary, you can simply identify it and generally force it to execute.

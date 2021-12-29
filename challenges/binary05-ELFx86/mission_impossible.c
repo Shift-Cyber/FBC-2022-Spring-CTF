@@ -33,7 +33,6 @@ int main()
     else
     {
         fscanf(fio, "%lu", &random_seed);
-        printf("%lu\n", random_seed);
 
         srand(random_seed);
     }
