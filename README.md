@@ -270,10 +270,10 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 <br>
 
-## Reverse Engineering
+## Reversing & Forensics
 ### REVERSE [10pts] The Strings
 [**Challenge:**](challenges/binary02-data) ```challenges/binary02-data```<br>
-[**Solution:**](solutions/re/the_strings) ```solutions/re/the_strings```
+[**Solution:**](solutions/re-forensics/the_strings) ```solutions/re-forensics/the_strings```
 > FBC{now_thats_what_i_call_ascii}
 
 **Intended Solution:** Simply run strings on a binary to extract all the data. This will be a large data blob like 10MB, so you wont be able to just read it. Need to grep for the flag handle FBC{.
@@ -282,7 +282,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### REVERSE [25pts] Arrival
 [**Challenge:**](challenges/binary03-ELFx86_64) ```challenges/binary03-ELFx86_64```<br>
-[**Solution:**](solutions/re/arrival) ```solutions/re/arrival```
+[**Solution:**](solutions/re-forensics/arrival) ```solutions/re-forensics/arrival```
 > FBC{this_is_where_it_all_begins}
 
 **Intended Solution:** Once the entry point has been identified, submit it to the binary you're running locally and the binary dumps the flag to STDOUT if its correct. The tool of choice here is likely to be readelf, but there are a variety of options.
@@ -291,7 +291,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### REVERSE [50pts] Hidden Figures
 [**Challenge:**](challenges/image01-jpeg) ```challenges/image01-jpeg```<br>
-[**Solution:**](solutions/re/hidden_figures) ```solutions/re/hidden_figures```
+[**Solution:**](solutions/re-forensics/hidden_figures) ```solutions/re-forensics/hidden_figures```
 > FBC{feline_meme_vault}
 
 **Intended Solution:** This challenge introduces data embedded in other data without being aparent. This is more CTF focused than RE admittedly but its interesting and fun so its a good CTF problem. Steghide extract -sf cat.jpg does the trick.
@@ -300,7 +300,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### REVERSE [50pts] Hidden Places
 [**Challenge:**](challenges/pcapng02-usb) ```challenges/pcap02-usb```<br>
-[**Solution:**](solutions/re/hidden_places) ```solutions/re/hidden_places```
+[**Solution:**](solutions/re-forensics/hidden_places) ```solutions/re-forensics/hidden_places```
 > FBC{wireshark_is_a_protocol_analyzer} || FBC{wireshark_is_a_protocol_analyzeer} || fbc[wireshark-is-a-protocol-analyzer] || fbc[wireshark-is-a-protocol-analyzeer]
 
 **Intended Solution:** Here we have a USB bus capture and must extract the keystrokes. This can be done by HID table looup, but there are much simpler existing scripts to acomplish the same thing.
@@ -309,16 +309,16 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 ### REVERSE [50pts] Eraser
 [**Challenge:**](challenges/binary04-ext4) ```challenges/binary04-ext4```<br>
-[**Solution:**](solutions/re/eraser) ```solutions/re/eraser```
-> FBC{flag_placeholder}
+[**Solution:**](solutions/re-forensics/eraser) ```solutions/re-forensics/eraser```
+> FBC{images_aren't_pictures_in_my_world}
 
 **Intended Solution:** This challenge requires the competitor to mount a disk image locally on their system and read the flag.txt file off the image. This can be done with a simply mount command in linux once they use file to identify the image type.
 
-**Teaching Points:** Here we introduce another way to package data, iamge files. This is very important for reverse engineering when image files are recieved and therefor this challenge leads into a very valuable skill in the real world.
+**Teaching Points:** Here we introduce another way to package data, image files. This is very important for reverse engineering when image files are recieved and therefor this challenge leads into a very valuable skill in the real world.
 
 ### REVERSE [90pts] The Impossible
 [**Challenge:**](challenges/binary05-ELFx86) ```challenges/binary05-ELFx86```<br>
-[**Solution:**](solutions/re/mission_impossible) ```solutions/re/mission_impossible```
+[**Solution:**](solutions/re-forensics/mission_impossible) ```solutions/re-forensics/mission_impossible```
 > FBC{flag_placeholder}
 
 **Intended Solution:** Finally we require the user to do some actual reverse engineering in a disassembler/decompiler/debugger. Here the user must identify that a password is randomly generated at runtime and bypass this check in a debugger, or forecfull point the instruction pointer to the flag function.
