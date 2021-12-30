@@ -39,7 +39,6 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Teaching Points:** This is how all Jeapordy CTFs work and its going to get them used to our flag format so that they have a crib in some cases or just so they know what they're looking for.
 
-
 <br>
 
 ## Web Exploitation (WEBEX)
@@ -266,7 +265,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 **Intended Solution:** The user starts by interacting with a UDP socket in the server and once it asks for the data the server sends the data to the user on a random port between 10-11k. The user must use wireshark to find and read the UDP stream for the flag.
 
-**Teaching Points:** Now we introuce UDP. This challenge further gets the student to associate connections with other connections and dig further into what a specific endpoint is doing based on a specific starting point.
+**Teaching Points:** Now we introuce UDP. This challenge further gets the student to associate connections with other connections and dig further into what a specific endpoint is doing based on a specific starting point. Also, the main reason this is a 90 point problem is that they will need to foward ports 50000-55000 in order to allow the challenge through NAT. Most likely...
 
 <br>
 
