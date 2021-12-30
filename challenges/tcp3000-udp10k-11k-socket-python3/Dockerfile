@@ -1,9 +1,10 @@
-# sudo docker build -t challenge_tcp5555 .
-# sudo docker run -d -p 3000:3000/tcp -p50000-55000:50000-55000/udp --rm --name FBC_tcp5555 challenge_tcp5555
+# sudo docker build -t challenge_tcp3000 .
+# sudo docker run -d -p 3000:3000/tcp -p 5000-5500:5000-5500/udp --rm --name FBC_tcp3000 challenge_tcp3000
 
 FROM ubuntu:20.04
 
 RUN apt-get update
+RUN apt-get install python3 -y
 
 RUN useradd -d /home/mailman/ -m -p mailman -s /bin/bash mailman
 RUN echo "mailman:mailman" | chpasswd
@@ -15,7 +16,8 @@ COPY flag.txt .
 
 RUN chown -R mailman:mailman /home/mailman
 
-USER telegram
-EXPOSE 5555
+USER mailman
+EXPOSE 3000/tcp
+EXPOSE 5000-5010/udp
 CMD chmod +x mailman.py
-CMD python3 mailman.py
+CMD /usr/bin/python3 ./mailman.py
