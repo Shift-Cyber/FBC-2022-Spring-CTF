@@ -4,9 +4,14 @@ from random import randint
 
 sock_host = '127.0.0.1'
 sock_port = 1234
-flag = b"FBC{connection?_less_connection...connection-less}"
 
-while True: #unfortunately cant use ynetd here cause we need to resolve source IP
+flag = None
+
+# set flag from config
+with open("flag.txt","r") as f:
+    for l in f: flag = l.encode('ascii')
+
+while True: # unfortunately cant use ynetd here cause we need to resolve source IP
     with socket(AF_INET, SOCK_STREAM) as sock_io:
         sock_io.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
         sock_io.bind((sock_host,sock_port))
@@ -29,13 +34,3 @@ while True: #unfortunately cant use ynetd here cause we need to resolve source I
             print(f"Sent flag to {sender_address}:UDP_{random_port}")
             connection.send(b"\nIt was sent... somewhere...")        
         connection.close()
-    
-    
-
-"""
-with connection:
-    connection.send("Welcome to the server")
-
-except OSError:
-    print(f"[!] Couldn't bind the socket on TCP_{sock_port}")
-    exit()"""

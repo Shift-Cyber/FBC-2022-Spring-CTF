@@ -261,7 +261,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### NET [90pts] You've Got Mail
 [**Challenge:**](challenges/udp1234-udp10k-11k-socket-python3) ```challenges/udp1234-udp10k-11k-socket-python3```<br>
 [**Solution:**](solutions/networking/youve_got_mail) ```solutions/networking/youve_got_mail```
-> FBC{flag_placeholder}
+> FBC{connection?_less_connection...connection-less}
 
 **Intended Solution:** The user starts by interacting with a UDP socket in the server and once it asks for the data the server sends the data to the user on a random port between 10-11k. The user must use wireshark to find and read the UDP stream for the flag.
 
