@@ -1,0 +1,4 @@
+NET_10: Shark Week
+NET_50: Spy Kids
+NET_50: Polaroid
+NET_50: Parasite
