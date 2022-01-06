@@ -111,7 +111,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### BINEX [25pts] Telegram
 [**Challenge:**](challenges/tcp5555-socket-ynetd) ```challenges/tcp5555-socket-ynetd```<br>
 [**Solution:**](solutions/binex/telegram) ```solutions/binex/telegram```
-> FBC{flag_placeholder}
+> FBC{the_world_runs_on_sockets}
 
 **Intended Solution:** Here the competitor connects to a socket and must recieve a message. This is intended to be done with netcat but could teheoritically be done with pwntools or raw socket programming in any language.
 
