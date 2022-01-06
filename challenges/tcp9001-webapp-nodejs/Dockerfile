@@ -1,5 +1,5 @@
-# sudo docker build -t challenge_tcp7777 .
-# sudo docker run -d -p 7777:7777/tcp --rm --name challenge_tcp7777 challenge_tcp7777
+# sudo docker build -t challenge_tcp9001 .
+# sudo docker run -d -p 9001:9001/tcp --rm --name challenge_tcp9001 challenge_tcp9001
 
 FROM node:9-slim
 
