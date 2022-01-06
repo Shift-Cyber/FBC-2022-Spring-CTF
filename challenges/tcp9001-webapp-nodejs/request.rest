@@ -1,0 +1,11 @@
+POST http://localhost:9001/login.html
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "monkeybusiness"
+}
+###
+
+GET http://localhost:9001/admin.html
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW5pc3RyYXRvciIsImFkbWluIjoieWVzIiwiaWF0IjoxNjQxNDUzMjczLCJleHAiOjE3Mjc4NTMyNzMsImlzcyI6IkZhbGxicm9vayBDeWJlciAoRkJDKSJ9.7HtI6Pr2HuUIQUDmeEU9pmo2jVTplaz0c12QcENAYZE

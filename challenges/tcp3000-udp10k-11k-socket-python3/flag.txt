@@ -1,0 +1,1 @@
+FBC{fire_and_forget}

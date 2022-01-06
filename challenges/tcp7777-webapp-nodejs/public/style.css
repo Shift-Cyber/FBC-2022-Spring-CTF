@@ -1,0 +1,16 @@
+.center{
+    text-align:center;
+}
+
+.buttons_container {
+    text-align:center;
+}
+  
+.meme_container {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width:500px;
+    max-width:500px;
+}

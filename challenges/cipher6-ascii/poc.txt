@@ -1,0 +1,24 @@
+We have a crib (known plaintext) of "FBC{" which we can abuse to find the result in a max of 256*4 tries instead of 256^4
+
+1. Start by testing the first character of the ciphertext against all 256 possibilities, save the ones that result in F as the first character. There is only one result, and therefor we know the first byte of the key is 0x56
+
+Key = 56: Fº..k.8.n§'.a.9.e.#Þ_.%.b§..u...a...o§!.c.8.y.
+
+2. Now do it again testing for all possible options, but instead check for the crib byte 'B' in the second positon. There is only one possible option.
+
+Key = ae: ¾Bìb.nÀn._ßu.iÁm.xÛ&§cÝp._Öv.rðn.yðm._Ùp.tÀk.}
+
+3. One more time, third position. Again, just one possibility
+
+Key = 01: .íCÍ<ÁoÁ9ðpÚ6ÆnÂ2×t..Ìrß5ðyÙ"Ý_Á6Ö_Â8ðvß4ÛoÄ.Ò
+
+4. Last time, fourth position. Same situation.
+
+Key = b7: §[õ{.wÙw.FÆl.pØt.aÂ?¾zÄi.FÏo.kéw.`ét.FÀi.mÙr.d
+
+
+Assemble all these bytes together as this is as much crib as we have. XOR it together and see what we get:
+
+Key: \x56\xAE\x01\xB7
+
+It works, flag: FBC{known_plaintext?_crib_your_way_to_victory}

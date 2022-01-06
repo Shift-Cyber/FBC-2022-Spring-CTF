@@ -1,0 +1,31 @@
+version: '3'
+services:
+    fast-and-furious:
+        build: challenges/tcp1234-socket-ynetd
+        ports:
+            - "1234:1234/tcp"
+    meme-gallery:
+        build: challenges/tcp1337-webapp-nodejs
+        ports:
+            - "1337:1337/tcp"
+    mail:
+        build: challenges/tcp3000-udp10k-11k-socket-python3
+        ports:
+            - "3000:3000/tcp"
+            - "5000-5500:5000-5500/udp"
+    telegram:
+        build: challenges/tcp5555-socket-ynetd
+        ports:
+            - "5555:5555/tcp"
+    stack-abuser:
+        build: challenges/tcp6000-socket-ynetd
+        ports:
+            - "6000:6000/tcp"
+    robotics:
+        build: challenges/tcp7777-webapp-nodejs
+        ports:
+            - "7777:7777/tcp"
+    portal:
+        build: challenges/tcp9001-webapp-nodejs
+        ports:
+            - "9001:9001/tcp"
