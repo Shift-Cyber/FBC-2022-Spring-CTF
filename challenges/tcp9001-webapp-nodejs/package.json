@@ -1,0 +1,26 @@
+{
+  "name": "tcp9001-webapp-nodejs",
+  "version": "1.0.0",
+  "description": "FBC WEBEX Challenges",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemod app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmsinger/FBC-2022-Spring-CTF.git"
+  },
+  "author": "Nathaniel Singer (nathaniel.singer@scyca.org)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmsinger/FBC-2022-Spring-CTF/issues"
+  },
+  "homepage": "https://github.com/nmsinger/FBC-2022-Spring-CTF#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

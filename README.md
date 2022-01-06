@@ -33,7 +33,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ## Getting Started
 ### WELCOME [1pt] For the Flag
 [**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
-> FBC{flag_placeholder}
+> FBC{have_you_got_what_it_takes?}
 
 **Intended Solution:** Simply read the instructions and after creating an account get on the board with a single point. This gets the engine to recognize their account and gets them familiar.
 
@@ -45,7 +45,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [10pts] Inspector Gadget
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/inspector_gadget) ```solutions/web/inspector_gadget```
-> FBC{have_you_got_what_it_takes?}
+> FBC{looks_like_you're_a_real_detective}
 
 **Intended Solution:** The competitor navigates to the web page (with off-nominal port) and uses "inspect element" or "view source" to observe the HTML and code comments, where the flag is embedded.
 
@@ -54,7 +54,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [25pts] The Middleman
 [**Challenge:**](challenges/tcp1337-webapp-nodejs) ```challenges/tcp1337-webapp-nodejs```<br>
 [**Solution:**](solutions/web/the_middleman) ```solutions/web/the_middleman```
-> FBC{flag_placeholder}
+> FBC{use_your_head_check_out_the_headers}
 
 **Intended Solution:** The competitor sets up a web proxy, ideally BurpSuite Community and using that web proxy intercepts web requests between the client browser and web server. The flag is in a XFLAG header.
 
@@ -63,7 +63,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [50pts] Get Out
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/get_out) ```solutions/web/get_out```
-> FBC{flag_placeholder}
+> FBC{GETm_outta_here}
 
 **Intended Solution:** After navigating around the page and inspecting that the hyperlinks simply change a GET parameter, the user finds a code comment TODO saying that the "flag" button hasnt been implemented yet. They forecfully submit "flag" as the GET param to display the flag image.
 
@@ -72,29 +72,29 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### WEBEX [50pts] Mr. Robot
 [**Challenge:**](challenges/tcp7777-webapp-nodejs) ```challenges/tcp7777-webapp-nodejs```<br>
 [**Solution:**](solutions/web/mr_robot) ```solutions/web/mr_robot```
-> FBC{flag_placeholder}
+> FBC{why_do_we_want_to_stop_spiders_anyways?}
 
 **Intended Solution:** User performs standard webapp reconisance and identifies an active robots.txt page. This page has an admin page that should be behind auth but is accessible. The user forecfully browses to the page for the flag.
 
 **Teaching Points:** First and foremost we teach what the robots RFC is and why its implemented for spiders. Then there is the idea that sometimes its used to hiden sensitive pages and can therefore expose them. Lastly, foreful browsing.
 
-### WEBEX [50pts] Cookie Monster
-[**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
-[**Solution:**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
-> FBC{flag_placeholder}
-
-**Intended Solution:** Either via an established web-proxy or through store inspection in the brower, or via a cookie editor, the user identifies a cookie with the flag in it and extracts the string.
-
-**Teaching Points:** Cookies are simply another header in the web request and they are used for a variety of things but simply put are a way for a client to track information and send it to and from a web server.
-
-### WEBEX [90pts] The Postman
+### WEBEX [50pts] The Postman
 [**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
 [**Solution:**](solutions/web/the_postman) ```solutions/web/the_postman```
-> FBC{flag_placeholder}
+> FBC{ill_get_to_it_when_i_get_to_it}
 
-**Intended Solution:** User is given the login credentails but is told the page is submitting the wrong credentials due to a client-side bug. They manually set the POST parameters to login with the provided credentials successfully.
+**Intended Solution:** First the user identifies that the button is disabled for login and goes to inspect source. When they do they find the code comment telling them to manually POST the provided credentials. This response contains the flag.
 
-**Teaching Points:** Sometimes there are things clientside that prevent us from logging in. Just because there is a bug client-side, doesn't mean we can't send data to the server. You have complete control over what is being sent via the proxy.
+**Teaching Points:** First and foremost this challenge teaches about POST parameters and how login interactions often work. More importantly it teaches how to execute a POST request manually and observe the response.
+
+### WEBEX [90pts] Cookie Monster
+[**Challenge:**](challenges/tcp9001-webapp-nodejs) ```challenges/tcp9001-webapp-nodejs```<br>
+[**Solution:**](solutions/web/cookie_monster) ```solutions/web/cookie_monster```
+> FBC{gimme_that_real_john_hancock}
+
+**Intended Solution:** Continuing The Postman the user is redirected to admin.html and provided a JWT. This JWT contains a boolean admin field which can be modified. The token signature is not validated. With this change the admin can access admin.html for the flag.
+
+**Teaching Points:** What is a JWT? How is it used? Why is the signature important? This also teaches how a brower stores data, cookies, and how users can maniuplate them to their advantage.
 
 <br>
 
@@ -216,25 +216,25 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### NET [10pts] Shark Week
 [**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/shark_week) ```solutions/networking/shark_week```
-> FBC{flag_placeholder}
+> FBC{2022-01-04 12:45:03}
 
-**Intended Solution:** First things first, the competitor simply opens the capture in wireshark and oveserves the statistics. The flag is simply the capture start timestamp.
+**Intended Solution:** First things first, the competitor simply opens the capture in wireshark and oveserves the statistics. The flag is simply the capture time of the first packet.
 
 **Teaching Points:** Here we start to get comfortable with wireshark and specifically how to identify basic information about the capture. This serves future problems as well as general knowledge.
 
 
 ### NET [25pts] The Matrix
 [**Solution:**](solutions/networking/the_matrix) ```solutions/networking/the_matrix```
-> FBC{flag_placeholder}
+> FBC{16_4094}
 
-**Intended Solution:** This math can either be done by hand as 2^(32-12), or simply identified by using a subnet calculator online. Ideally this would be done by hand so that concepts are comprehended.
+**Intended Solution:** Here the competitor must determine the number of subnets and hosts in a particular network, in this case /20. This can be done by hand but is intended to be done with a subnet calculator. With 20 subnet bits turned on there are 16 available subnets with 4094 host addresses per subnet. Flag is submitted as {subnets_hosts}
 
 **Teaching Points:** The idea of this problem is to demonstrat what a bit is actually for. But it also introduces the idea of subnets and segregation. Its a little loose honestly, but this hopefully feels related to the networking classes.
 
 #### NET [50pts] Parasite
 [**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/parasite) ```solutions/networking/parasite```
-> FBC{flag_placeholder}
+> FBC{break_out_the_phonebook_billy}
 
 **Intended Solution:** Here the user must investigate DNS lookups and see all the resolved hosts. The flag will simply be one of the resolved hostname lookups.
 
@@ -243,7 +243,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 #### NET [50pts] Polaroid
 [**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/polaroid) ```solutions/networking/polaroid```
-> FBC{flag_placeholder}
+> FBC{meme_extraction_is_the_real_art}
 
 **Intended Solution:** The user must use wiresharks object dump feature to grab images out of all http connections. The flag is one of these images. We provide the stream number, so the user can focus simply on the extraction.
 
@@ -252,7 +252,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### NET [50pts] Spy Kids
 [**Challenge:**](challenges/pcapng01-ip) ```challenges/pcapng01-ip```<br>
 [**Solution:**](solutions/networking/spy_kids) ```solutions/networking/spy_kids```
-> FBC{flag_placeholder}
+> FBC{kinda_secure_shell}
 
 **Intended Solution:** Here we introduce stream investigation. Once the competitor identiifes that there is telnet traffic, they must follow-tcp-stream against the telnet connection to see the plaintext flag.
 
@@ -261,7 +261,7 @@ These prizes are set for each position, however, prizes are actually picked in t
 ### NET [90pts] You've Got Mail
 [**Challenge:**](challenges/udp1234-udp10k-11k-socket-python3) ```challenges/udp1234-udp10k-11k-socket-python3```<br>
 [**Solution:**](solutions/networking/youve_got_mail) ```solutions/networking/youve_got_mail```
-> FBC{connection?_less_connection...connection-less}
+> FBC{fire_and_forget}
 
 **Intended Solution:** The user starts by interacting with a UDP socket in the server and once it asks for the data the server sends the data to the user on a random port between 10-11k. The user must use wireshark to find and read the UDP stream for the flag.
 

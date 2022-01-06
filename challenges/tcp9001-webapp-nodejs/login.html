@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBC WEBEX: Portal</title>
+    <link rel="stylesheet" href="./public/style.css">
+</head>
+
+<body>
+  <h1 class="text_center">FBC: Super Secure Login Portal</h1>
+
+  <!--I'll enable this login button when I finish writing the page... for now just submit
+         a POST request to login.html with the set credentials manually. If you forgot,
+          its username:admin and password:monkeybusiness-->
+
+  <!--<form action="login.html" method="post"></form>-->
+    <div class="field_container">
+      <h4 class="text_center">Username</h4>
+      <input class="field_container" type="text" placeholder="Enter Username" name="username" required><br>
+      <h4 class="text_center">Password</h4>
+      <input class="field_container" type="password" placeholder="Enter Password" name="password" required>
+    </div>
+
+    <div class="field_container" style="padding-top: 15px;">
+      <button type="submit" disabled=True >Login</button>
+      <button type="button">Cancel</button>
+    </div>
+    
+    <h4 class="text_center">
+      <input type="checkbox" checked="checked" name="remember">Remember me</h4>
+    </h4>
+
+    <img class="monkey_style" src="./media/monkey.gif">
+
+  <!--</form>-->
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBC WEBEX: Robotics</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+    <h1 class="center">FBC: Robot Go-GETter</h1>
+    <p class="center">GET a flag by setting the image parameter to "flag" and another parameter, "authorized" to "yes"</p>
+
+    <div class="buttons_container">
+        <h3>Super Advanced Selector Menu</h3>
+        <a href="?image=robot-1">Robot 1</a>
+        <a href="?image=robot-2">Robot 2</a>
+        <a href="?image=robot-3">Robot 3</a>
+    </div>
+
+    <img class="meme_container" id="meme" src="">
+
+    <!--sanity checks performed by middleware-->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        //assemble image URI/URL
+        const image = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/images/" + urlParams.get('image');
+
+        document.getElementById("meme").src = image
+    </script>
+</body>
+</html>
