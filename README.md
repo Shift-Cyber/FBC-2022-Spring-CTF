@@ -32,8 +32,8 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 # Build on your System
 Initialize docker with: ```sudo docker-compose up -d```
-
 Rebuild containers and init with: ```sudo docker-compose up --rebuild -d```
+Stop all instances with: ```sudo docker-compose stop```
 
 ## Mappings
 - fast-and-furious (1234:1234/tcp)
