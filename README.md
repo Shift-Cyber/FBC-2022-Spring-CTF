@@ -30,6 +30,22 @@ These prizes are set for each position, however, prizes are actually picked in t
 
 <br>
 
+# Build on your System
+Initialize docker with: ```sudo docker-compose up -d```
+
+Rebuild containers and init with: ```sudo docker-compose up --rebuild -d```
+
+## Mappings
+- fast-and-furious (1234:1234/tcp)
+- meme-gallery:(1337:1337/tcp)
+- mail (3000:3000/tcp --and-- 5000-5500:5000-5500/udp)
+- telegram (5555:5555/tcp)
+- stack-abuser(6000:6000/tcp)
+- robotics (7777:7777/tcp)
+- portal (9001:9001/tcp)
+
+<br>
+
 ## Getting Started
 ### WELCOME [1pt] For the Flag
 [**Solution:**](solutions/welcome/for_the_flag) ```solutions/welcome/for_the_flag```
