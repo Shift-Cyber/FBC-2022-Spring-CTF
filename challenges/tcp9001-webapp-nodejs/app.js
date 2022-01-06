@@ -58,7 +58,7 @@ app.get("/admin.html", (req,res) => {
 app.post("/login.html", (req,res) => {
     // Validate credentials
     if (req.body.username === "admin" && req.body.password === "monkeybusiness") {
-        res.header({ "Authorization": "Bearer " + token })
+        res.header({ "Authorization": "Bearer " + token, "X-FLAG": "FBC{ill_get_to_it_when_i_get_to_it}" })
         res.redirect(202, "/admin.html"); 
     } else { //bad creds
         res.writeHead(401).send()
