@@ -145,7 +145,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### BINEX [50pts] Stacked
 [**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/stacked) ```solutions/binex/stacked```
-> FBC{flag_placeholder}
+> FBC{WOAH_you_shouldnt_be_able_to_overwrite_THAT}
 
 **Intended Solution:** Now the competitor has a variable loaded onto the stack and must overwrite the contents via overflow. When that happens on the remote machine logic checks determine the variable was overflowed and print a value to the screen.
 
@@ -154,7 +154,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### BINEX [50pts] Ready, Aim, Fire
 [**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/ready_aim_fire) ```solutions/binex/ready_aim_fire```
-> FBC{flag_placeholder}
+> FBC{fire_and_forget}
 
 **Intended Solution:** Now the competitor must calculate at exactly what offset the overflow is happening and replace those specific bytes with a non-printable byte pattern. This means pattern creation and matching.
 

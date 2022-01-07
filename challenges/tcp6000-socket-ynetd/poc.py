@@ -3,7 +3,7 @@ from pwn import *
 
 context(terminal=['tmux', 'new-window'])
 
-if args['REMOTE']: io = remote('localhost', 6000)
+if args['REMOTE']: io = remote('battleground.ctf.scyca.org', 6000)
 else: io = process('./vuln')
 
 pad_500 = cyclic(500)
