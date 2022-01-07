@@ -1,6 +1,6 @@
 import sys
 
-print("You have 5 seconds to count to 100. Don't mess up.\n")
+print("You have 15 seconds to count to 100. Don't mess up.\n")
 
 for i in range(100):
     io = input(f"Send me the number {i}: ")

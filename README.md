@@ -118,7 +118,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### BINEX [10pts] Execution
 [**Challenge:**](challenges/binary01-ELFx86) ```challenges/binary01-ELFx86```<br>
 [**Solution:**](solutions/binex/execution) ```solutions/binex/execution```
-> FBC{flag_placeholder}
+> FBC{WaIt_bUt_ThAtS_nOt_An_ExE}
 
 **Intended Solution:** The competitor will recieve the binary and must run it in order to recieve the flag, this means downloading it to an approperiate directory and setting executable, then running it.
 
@@ -136,7 +136,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### BINEX [50pts] Fast and Furious
 [**Challenge:**](challenges/tcp1234-socket-ynetd) ```challenges/tcp1234-socket-ynetd```<br>
 [**Solution:**](solutions/binex/fast_and_furious) ```solutions/binex/fast_and_furious```
-> FBC{flag_placeholder}
+> FBC{faster_and_more_furious}
 
 **Intended Solution:** The competitor starts from a similar place with generic socket programming, but now must script in order to both send AND recieve from the socket 100 times within 10 seconds. This has to be scripted due to the time requirement.
 
