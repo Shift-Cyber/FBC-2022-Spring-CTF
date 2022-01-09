@@ -9,11 +9,14 @@ This CTF is compromised of 30 challenges, with 6 problems per each of the 5 sect
 Competition opens at 1500, at the start of the first practice of the year, 7 January 2022 and runs until the start of our last practice of the season on 20 May 2022. The goal is for you as the participant to take as much as possible away from this, aside from just the cool prizes ;)
 
 ## Prize Pool
-These prizes are set for each position, however, prizes are actually picked in the order of the winner. For example, if the first place winner wants to take the second place prize and give up the first place prize to the would be winner, that is perfectly acceptable.
+These prizes are set for each position, however, prizes are actually picked in the order of the winner. For example, if the first place winner wants to take the second place prize and give up the first place prize to the would be winner, that is perfectly acceptable. Aside from placement prizes, the completion prizes are not limited to a single individual. In order to qualify for the 100 point prize, you must have not only the points, but all 10 points problems complete.
 
-**1st Place** - Nintendo Switch<br>
+**1st Place** - Pick set and demo locks<br>
 **2nd Place** - Raspberry Pi 4B<br>
 **3rd Place** - Arduino w/BB Kit<br>
+
+**150 points** - HTB 1 Month Voucher
+**1000 points** - THM 3 Month Voucher
 
 **Tie breaks:** If there is a tie for a position on the scoreboard based on total points the tie will be broken by who achieved that amount of points first.
 <br>
