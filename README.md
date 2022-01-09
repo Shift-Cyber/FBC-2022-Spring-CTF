@@ -163,7 +163,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### BINEX [90pts] Return of the King
 [**Challenge:**](challenges/tcp6000-socket-ynetd) ```challenges/tcp6000-socket-ynetd```<br>
 [**Solution:**](solutions/binex/return_of_the_king) ```solutions/binex/return_of_the_king```
-> FBC{flag_placeholder}
+> FBC{go_google_ret2win}
 
 **Intended Solution:** In the final binex challenge, we are overwriting with an actual address for simluated code execution. Here the user now must use the obtained shell to cat the flag file.
 
@@ -275,7 +275,7 @@ Stop all instances with: ```sudo docker-compose stop```
 **Teaching Points:** Here we introduce follow-tcp-stream, the idea that telnet is insecure and "here's why" and lastly how to pull plaintext flags off plaintext connection captures.
 
 ### NET [90pts] You've Got Mail
-[**Challenge:**](challenges/udp1234-udp10k-11k-socket-python3) ```challenges/udp1234-udp10k-11k-socket-python3```<br>
+[**Challenge:**](challenges/tcp3000-udp10k-11k-socket-python3) ```challenges/udp1234-udp10k-11k-socket-python3```<br>
 [**Solution:**](solutions/networking/youve_got_mail) ```solutions/networking/youve_got_mail```
 > FBC{fire_and_forget}
 
