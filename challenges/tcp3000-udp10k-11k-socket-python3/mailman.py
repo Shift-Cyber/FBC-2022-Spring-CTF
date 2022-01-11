@@ -19,7 +19,7 @@ while True: # unfortunately cant use ynetd here cause we need to resolve source 
         print(f"Got connection from {sender_address}:TCP_{sender_port}")
 
         # Send challenge banner
-        connection.send(b"Hey It's the mailman, I'll deliver the flag to you. I tend to get lost though so all I can gaurentee is that it will be delivered to you on a random UDP port between 5000 and 5500.\n\n> Press [enter] to continue")
+        connection.send(b"Hey It's the mailman, I'll deliver the flag to you. I tend to get lost though so all I can guarantee is that it will be delivered to you on a random UDP port between 5000 and 5500.\n\n> Press [enter] to continue")
         connection.recv(1024)
 
         with socket(AF_INET, SOCK_DGRAM) as sock_io_flag:

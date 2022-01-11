@@ -319,7 +319,7 @@ Stop all instances with: ```sudo docker-compose stop```
 ### REVERSE [50pts] Hidden Places
 [**Challenge:**](challenges/pcapng02-usb) ```challenges/pcap02-usb```<br>
 [**Solution:**](solutions/re-forensics/hidden_places) ```solutions/re-forensics/hidden_places```
-> FBC{wireshark_is_a_protocol_analyzer} || FBC{wireshark_is_a_protocol_analyzeer} || fbc[wireshark-is-a-protocol-analyzer] || fbc[wireshark-is-a-protocol-analyzeer]
+> FBC{wireshark_is_a_PROTOCOL_analyzer}
 
 **Intended Solution:** Here we have a USB bus capture and must extract the keystrokes. This can be done by HID table looup, but there are much simpler existing scripts to acomplish the same thing.
 
