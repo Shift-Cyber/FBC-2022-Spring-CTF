@@ -232,7 +232,7 @@ Stop all instances with: ```sudo docker-compose stop```<br>
 
 ### CRYPTO [150pts] Unbreakable
 [**Challenge:**](challenges/cipher7-ascii) ```challenges/cipher7-ascii```<br>
-[**Solution:**](solutions/crypto/unbreakble) ```solutions/crypto/enigma```
+[**Solution:**](solutions/crypto/unbreakble) ```solutions/crypto/unbreakable```
 > FBC{7002,932549}
 
 **Intended Solution:** This problem is a bad implementation of an algorithm called RSA (Rivest–Shamir–Adleman). RSA is called "asymetric" because the key we use to encrypt the message is different than the one we use to decrypt it. The two keys are mathimatically related to each other and together we call them the "key pair." Because of the mathematical relationship, if you can figure out the secret primes that were used to generate the public key (key used for encryption), you can determine the private key (key used for decryption). Recovery the secret primes (p,q) and submit them as "FBC{p,q}" ie: if p was 1234567, and q was 0987654, the flag would be "FBC{1234567,0987654}"
