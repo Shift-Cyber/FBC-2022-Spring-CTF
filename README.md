@@ -237,7 +237,7 @@ Stop all instances with: ```sudo docker-compose stop```<br>
 
 **Intended Solution:** This problem is a bad implementation of an algorithm called RSA (Rivest–Shamir–Adleman). RSA is called "asymetric" because the key we use to encrypt the message is different than the one we use to decrypt it. The two keys are mathimatically related to each other and together we call them the "key pair." Because of the mathematical relationship, if you can figure out the secret primes that were used to generate the public key (key used for encryption), you can determine the private key (key used for decryption). Recovery the secret primes (p,q) and submit them as "FBC{p,q}" ie: if p was 1234567, and q was 0987654, the flag would be "FBC{1234567,0987654}"
 
-This might be a useful resource: https://www.cs.drexel.edu/~jpopyack/IntroCS/HW/RSAWorksheet.html. we will not encrypt or decrypt our messages with this key pair due to complexities I can explain once you have solved this or the competition ends.
+This might be a useful resource: https://www.cs.drexel.edu/~jpopyack/IntroCS/HW/RSAWorksheet.html. We will not encrypt or decrypt our messages with this key pair due to complexities I can explain once you have solved this or the competition ends.
 
 **Teaching Points:** Now we introduce a modern cipher. The vulnerability in this implementation has occured many times in the real world and the implications are enormous. It's up to you to break the cipher by recovering the secrets. This problem is designed to teach how RSA works, what some potential mistakes people make are and why those mistakes are fatal. If you solve this, I'll dial up the heat and we can break RSA for actual decryption.
 
