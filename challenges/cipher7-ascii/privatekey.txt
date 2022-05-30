@@ -1,0 +1,10 @@
+      p   = 7001
+      q   = 932549
+      e   = 111323
+      d   = 586387
+      N   = 6528775549
+      r   = 6527836000
+      e*d = 65278360001
+e*d mod r = 1
+e and r are relatively prime
+d and r are relatively prime
